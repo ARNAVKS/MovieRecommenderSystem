@@ -1,5 +1,5 @@
 # MovieRecommenderSystem
-Hey! I made this project by using ****Google Colab Notebook**** and using ****PyCharm****. i made this whole project by taking some guidance from online plateform.
+Hey! I made this project by using ****Google Colab Notebook**** and using ****PyCharm****. I made this whole project by taking some guidance from online plateform.
 ##
 
 The ***movies_2.csv*** table is made by me, it is a merge of two original movies and credits table file which is already attached in the repository. 'movies_2.csv' has total 3 columns : **movie_id**, **title** and  **tags**. Where **movie_id** and **title** are default there are no changes in those columns but **tags** column is a merge of colums of overview, some actor/actress name and director name of that particular movie.
