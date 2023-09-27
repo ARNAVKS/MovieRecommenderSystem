@@ -1,3 +1,4 @@
+#pycharm code you can run this code only to run your recommender system the thing you have to do is you have to add 'similarity.pkl' file and 'movies_2.csv' file in your project PyCharm workspace
 import streamlit as st
 import pickle
 import pandas as pd
