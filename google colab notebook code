@@ -1,0 +1,21 @@
+#Code of google colab notebook which has to be done before the pychram one
+#importing the required libraries
+import pandas as pd
+import nltk
+from nltk.stem.porter import PorterStemmer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
+df=pd.read_csv('movies_2.csv')
+df.tags=df.tags.apply(lambda x:x.lower())
+cv=CountVectorizer(max_features=5000, stop_words='english')
+vectors=cv.fit_transform(df.tags).toarray()
+ps=PorterStemmer()
+def stem(text):
+  y=[]
+  for i in text.split():
+    y.append(ps.stem(i))
+  return " ".join(y)
+#applying stem function in all the values in the 'tags' column
+df.tags=df.tags.apply(stem)
+sim=cosine_similarity(vectors)
+pickle.dump(sim,open('similarity.pkl','wb'))
