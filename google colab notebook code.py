@@ -16,7 +16,7 @@ df.tags=df.tags.apply(lambda x:x.lower())
 
 #now using CountVectorizer() function
 
-cv=CountVectorizer(max_features=5000, stop_words='english')
+cv=TfidfVectorizer(stop_words='english')
 vectors=cv.fit_transform(df.tags).toarray()
 ps=PorterStemmer()
 
